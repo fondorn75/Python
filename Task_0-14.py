@@ -77,12 +77,47 @@ def ChetNecet(number):
     else:
         return "не четное"
 
+
 print("Число", ChetNecet(55))
 
 
 # 8. Показать числа от -N до N
+
+def DiapasonN(n):
+    list = {}
+    j = 0
+    for i in range(-n, n + 1):
+        list[j] = i
+        j += 1
+    return list
+
+
+print(DiapasonN(5))
+
+
 # 9. Показать четные числа от 1 до N
+
+def DiapasonChetN(n):
+    list = {}
+    j = 0
+    for i in range(1, n + 1):
+        if i % 2 == 0:
+            list[j] = i
+            j += 1
+    return list
+
+
+print(DiapasonChetN(6))
+
+
 # 10. Показать последнюю цифру трёхзначного числа
+
+def NumberEnd(number):
+    return number % 10
+
+
+print(NumberEnd(459))
+
 # 11. Показать вторую цифру трёхзначного числа
 # 12. Дано число из отрезка [10, 99]. Показать наибольшую цифру числа
 # 13. Удалить вторую цифру трёхзначного числа
