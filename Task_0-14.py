@@ -155,8 +155,27 @@ def DeleteSecondNumber(number):
 
 print(DeleteSecondNumber(452))
 
+
 # 14. Выяснить, кратно ли число заданному, если нет, вывести остаток.
 
+def MultipleNumber(num1, num2):
+    if num1 * num1 == num2:
+        return f"Число {num2} кратное {num1}"
+    else:
+        return f"Число {num2} не кратное {num1}"
+
+
+print(MultipleNumber(5, 25))
 
 
 # 15. Найти третью цифру числа или сообщить, что её нет
+
+def ThreeNumber(number):
+    temp = (number % 100) % 10
+    if number // 100 != 0:
+        return f"Третья цифра - {temp}"
+    else:
+        return "Третьей цифры нет"
+
+
+print(ThreeNumber(463))
