@@ -26,9 +26,9 @@ First_Kv_Second(25, 5)
 
 def Max_Min(first, second):
     if first > second:
-        return first
+        return f"Число {first} большее, число {second} меньшее"
     else:
-        return second
+        return f"Число {second} большее, число {first} меньшее"
 
 
 print(Max_Min(10, 15))
@@ -46,10 +46,7 @@ print(Week_Day(7))
 
 # 4. Найти максимальное из трех чисел
 
-def MaxFromThreeNumbers(number):
-    num1 = number // 100
-    num2 = (number % 100) // 10
-    num3 = number % 10
+def MaxFromThreeNumbers(num1, num2, num3):
     if num1 > num2:
         return num1
     elif num2 > num3:
@@ -58,7 +55,7 @@ def MaxFromThreeNumbers(number):
         return num3
 
 
-print(MaxFromThreeNumbers(358))
+print(MaxFromThreeNumbers(12, 28, 31))
 
 
 # 5. Написать программу вычисления значения функции y=f(a)
@@ -172,10 +169,12 @@ print(MultipleNumber(5, 25))
 
 def ThreeNumber(number):
     temp = (number % 100) % 10
-    if number // 100 != 0:
-        return f"Третья цифра - {temp}"
-    else:
+    if number // 100 == 0:
         return "Третьей цифры нет"
+    elif number // 100 > 10:
+        return f"В числе больше трех цифр {number}"
+    else:
+        return f"Третья цифра - {temp}"
 
 
-print(ThreeNumber(463))
+print(ThreeNumber(46334))
