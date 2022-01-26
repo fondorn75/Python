@@ -1,4 +1,4 @@
-# 1. Вывести квадрат числа
+# 0. Вывести квадрат числа
 from math import sin
 from random import randint
 
@@ -10,7 +10,7 @@ def kvadrat(f, n):
 print(kvadrat(4, 2))
 
 
-# 2. По двум заданным числам проверять является ли первое квадратом второго
+# 1. По двум заданным числам проверять является ли первое квадратом второго
 
 def First_Kv_Second(a, b):
     if b * b == a:
@@ -22,7 +22,7 @@ def First_Kv_Second(a, b):
 First_Kv_Second(25, 5)
 
 
-# 3. Даны два числа. Показать большее и меньшее число
+# 2. Даны два числа. Показать большее и меньшее число
 
 def Max_Min(first, second):
     if first > second:
@@ -34,7 +34,7 @@ def Max_Min(first, second):
 print(Max_Min(10, 15))
 
 
-# 4. По заданному номеру дня недели вывести его название
+# 3. По заданному номеру дня недели вывести его название
 
 def Week_Day(day):
     days = ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"]
@@ -44,7 +44,7 @@ def Week_Day(day):
 print(Week_Day(7))
 
 
-# 5. Найти максимальное из трех чисел
+# 4. Найти максимальное из трех чисел
 
 def MaxFromThreeNumbers(number):
     num1 = number // 100
@@ -61,7 +61,7 @@ def MaxFromThreeNumbers(number):
 print(MaxFromThreeNumbers(358))
 
 
-# 6. Написать программу вычисления значения функции y=f(a)
+# 5. Написать программу вычисления значения функции y=f(a)
 
 def FunkciaSin(a):
     return sin(a)
@@ -70,7 +70,7 @@ def FunkciaSin(a):
 print(round(FunkciaSin(180), 2))
 
 
-# 7. Выяснить является ли число чётным
+# 6. Выяснить является ли число чётным
 
 def ChetNecet(number):
     if number % 2 == 0:
@@ -82,7 +82,7 @@ def ChetNecet(number):
 print("Число", ChetNecet(55))
 
 
-# 8. Показать числа от -N до N
+# 7. Показать числа от -N до N
 
 def DiapasonN(n):
     list = {}
@@ -96,7 +96,7 @@ def DiapasonN(n):
 print(DiapasonN(5))
 
 
-# 9. Показать четные числа от 1 до N
+# 8. Показать четные числа от 1 до N
 
 def DiapasonChetN(n):
     list = {}
@@ -111,7 +111,7 @@ def DiapasonChetN(n):
 print(DiapasonChetN(6))
 
 
-# 10. Показать последнюю цифру трёхзначного числа
+# 9. Показать последнюю цифру трёхзначного числа
 
 def NumberEnd(number):
     return number % 10
@@ -120,7 +120,7 @@ def NumberEnd(number):
 print(NumberEnd(459))
 
 
-# 11. Показать вторую цифру трёхзначного числа
+# 10. Показать вторую цифру трёхзначного числа
 
 def SecondNumber(number):
     return (number % 100) // 10
@@ -129,7 +129,7 @@ def SecondNumber(number):
 print(SecondNumber(347))
 
 
-# 12. Дано число из отрезка [10, 99]. Показать наибольшую цифру числа
+# 11. Дано число из отрезка [10, 99]. Показать наибольшую цифру числа
 
 def MaxNumberIn():
     temp = randint(10, 99)
@@ -144,7 +144,7 @@ def MaxNumberIn():
 print(MaxNumberIn())
 
 
-# 13. Удалить вторую цифру трёхзначного числа
+# 12. Удалить вторую цифру трёхзначного числа
 
 def DeleteSecondNumber(number):
     num1 = number // 100
@@ -156,7 +156,7 @@ def DeleteSecondNumber(number):
 print(DeleteSecondNumber(452))
 
 
-# 14. Выяснить, кратно ли число заданному, если нет, вывести остаток.
+# 13. Выяснить, кратно ли число заданному, если нет, вывести остаток.
 
 def MultipleNumber(num1, num2):
     if num1 * num1 == num2:
@@ -168,7 +168,7 @@ def MultipleNumber(num1, num2):
 print(MultipleNumber(5, 25))
 
 
-# 15. Найти третью цифру числа или сообщить, что её нет
+# 14. Найти третью цифру числа или сообщить, что её нет
 
 def ThreeNumber(number):
     temp = (number % 100) % 10
