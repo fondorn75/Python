@@ -1,7 +1,7 @@
-# 0. Вывести квадрат числа
-from math import sin
+import math
 from random import randint
 
+# 0. Вывести квадрат числа
 
 def kvadrat(f, n):
     return f ** n
@@ -61,7 +61,7 @@ print(MaxFromThreeNumbers(12, 28, 31))
 # 5. Написать программу вычисления значения функции y=f(a)
 
 def FunkciaSin(a):
-    return sin(a)
+    return math.sin(a)
 
 
 print(round(FunkciaSin(180), 2))
@@ -69,14 +69,14 @@ print(round(FunkciaSin(180), 2))
 
 # 6. Выяснить является ли число чётным
 
-def ChetNecet(number):
+def ChetNechet(number):
     if number % 2 == 0:
-        return "четное"
+        return f"{number} четное"
     else:
-        return "не четное"
+        return f"{number} не четное"
 
 
-print("Число", ChetNecet(55))
+print("Число", ChetNechet(55))
 
 
 # 7. Показать числа от -N до N
@@ -111,7 +111,7 @@ print(DiapasonChetN(6))
 # 9. Показать последнюю цифру трёхзначного числа
 
 def NumberEnd(number):
-    return number % 10
+    return f"Последняя цифра числа {number} - {number % 10}"
 
 
 print(NumberEnd(459))
@@ -120,7 +120,7 @@ print(NumberEnd(459))
 # 10. Показать вторую цифру трёхзначного числа
 
 def SecondNumber(number):
-    return (number % 100) // 10
+    return f"Вторая цифра числа {number} - {(number % 100) // 10}"
 
 
 print(SecondNumber(347))
@@ -147,7 +147,7 @@ def DeleteSecondNumber(number):
     num1 = number // 100
     num2 = (number % 100) // 10
     num3 = number % 10
-    return f"{num1}{num3}"
+    return f"{num1*10+num3}"
 
 
 print(DeleteSecondNumber(452))
@@ -172,9 +172,9 @@ def ThreeNumber(number):
     if number // 100 == 0:
         return "Третьей цифры нет"
     elif number // 100 > 10:
-        return f"В числе больше трех цифр {number}"
+        return f"В числе больше трех цифр, третья цифра - {temp} и остаток - {number % 100}"
     else:
         return f"Третья цифра - {temp}"
 
 
-print(ThreeNumber(46334))
+print(ThreeNumber(46347))
