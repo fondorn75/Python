@@ -1,3 +1,4 @@
+import math
 from xmlrpc.client import MAXINT, MININT
 
 # 15. Дано число. Проверить кратно ли оно 7 и 23
@@ -45,10 +46,10 @@ def TrueOrFalse(x, y):
     return not(x and y) == (not x or not y)
 
 
-print(TrueOrFalse(False, False))
-print(TrueOrFalse(False, True))
-print(TrueOrFalse(True, False))
-print(TrueOrFalse(True, True))
+print(TrueOrFalse(0, 0))
+print(TrueOrFalse(0, 1))
+print(TrueOrFalse(1, 0))
+print(TrueOrFalse(1, 1))
 
 # 19. Определить номер четверти плоскости, в которой находится точка с координатами Х и У, причем X ≠ 0 и Y ≠ 0
 
@@ -85,4 +86,29 @@ print(QuarterNumber(3))
 # 21. Программа проверяет пятизначное число на палиндромом.
 
 
+def Polindrom(number):
+    num = str(number)
+    result = num[::-1]
+    return result == num
+
+
+print(Polindrom(54321235))
+
 # 22. Найти расстояние между точками в пространстве 2D/3D
+
+
+def Ploskost2D(xa, ya, xb, yb):
+    kv = 2
+    result = math.sqrt((math.pow((xb - xa), kv) + (math.pow((yb - ya), kv))))
+    return result
+
+
+def Ploskost3D(xa, ya, za, xb, yb, zb):
+    kv = 2
+    result = math.sqrt((math.pow((xb - xa), kv) +
+                       (math.pow((yb - ya), kv) + (math.pow((zb - za), kv)))))
+    return result
+
+
+print(round(Ploskost2D(-10, 10, 15, -5), 2))
+print(round(Ploskost3D(-10, 10, 15, -5, -15, 12), 2))
