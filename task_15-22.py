@@ -50,6 +50,19 @@ print(TrueOrFalse(True, True))
 # 19. Определить номер четверти плоскости, в которой находится точка с координатами Х и У, причем X ≠ 0 и Y ≠ 0
 
 
+def PlaneNumber(num1, num2):
+    if num1 > 0 and num2 > 0:
+        return 1
+    elif num1 < 0 and num2 > 0:
+        return 2
+    elif num1 < 0 and num2 < 0:
+        return 3
+    else:
+        return 4
+
+
+print(f"Номер четверти - {PlaneNumber(-10, -10)}")
+
 # 20. Ввести номер четверти, показать диапазоны для возможных координат
 
 
