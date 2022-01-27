@@ -1,4 +1,7 @@
+from xmlrpc.client import MAXINT, MININT
+
 # 15. Дано число. Проверить кратно ли оно 7 и 23
+
 
 def MultipleNumbers(number):
     if number % 7 == 0 and number % 23 == 0:
@@ -65,6 +68,19 @@ print(f"Номер четверти - {PlaneNumber(-10, -10)}")
 
 # 20. Ввести номер четверти, показать диапазоны для возможных координат
 
+
+def QuarterNumber(number):
+    if number == 1:
+        return f"По Х от 0 до {MAXINT}, по Y от 0 до {MAXINT}"
+    elif number == 2:
+        return f"По Х от 0 до {MININT}, по Y от 0 до {MAXINT}"
+    elif number == 3:
+        return f"По Х от 0 до {MININT}, по Y от 0 до {MININT}"
+    elif number == 4:
+        return f"По Х от 0 до {MAXINT}, по Y от 0 до {MININT}"
+
+
+print(QuarterNumber(3))
 
 # 21. Программа проверяет пятизначное число на палиндромом.
 
