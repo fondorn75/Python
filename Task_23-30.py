@@ -43,13 +43,13 @@ print(SummaNumbers(10))
 def NaturalDegree(a, b):
     temp = {}
     j = 0
-    for a in range(1, b + 1):
+    for b in range(1, b + 1):
         temp[j] = a**b
         j += 1
     return temp.values()
 
 
-print(NaturalDegree(2, 3))
+print(NaturalDegree(3, 4))
 
 # 27. Определить количество цифр в числе
 
