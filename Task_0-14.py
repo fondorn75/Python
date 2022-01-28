@@ -3,6 +3,7 @@ from random import randint
 
 # 0. Вывести квадрат числа
 
+
 def kvadrat(f, n):
     return f ** n
 
@@ -37,7 +38,8 @@ print(Max_Min(10, 15))
 # 3. По заданному номеру дня недели вывести его название
 
 def Week_Day(day):
-    days = ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"]
+    days = ["Понедельник", "Вторник", "Среда",
+            "Четверг", "Пятница", "Суббота", "Воскресенье"]
     return days[day - 1]
 
 
@@ -87,7 +89,7 @@ def DiapasonN(n):
     for i in range(-n, n + 1):
         list[j] = i
         j += 1
-    return list
+    return list.values()
 
 
 print(DiapasonN(5))
@@ -102,7 +104,7 @@ def DiapasonChetN(n):
         if i % 2 == 0:
             list[j] = i
             j += 1
-    return list
+    return list.values()
 
 
 print(DiapasonChetN(6))
