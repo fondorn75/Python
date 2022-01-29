@@ -54,10 +54,41 @@ print(NaturalDegree(3, 4))
 # 27. Определить количество цифр в числе
 
 
+def NumberOfDigits(number):
+    temp = str(number)
+    return f"Количество цифр в числе - {len(temp)}"
+
+
+print(NumberOfDigits(125487265))
+
 # 28. Подсчитать сумму цифр в числе
 
 
+def SummaNumbersInDigit(number):
+
+    result = [int(x) for x in str(number)]
+    temp = 0
+    for i in result:
+        temp += i
+
+    return f"Сумма цифр в числе - {temp}"
+
+
+print(SummaNumbersInDigit(182346))
+
 # 29. Написать программу вычисления произведения чисел от 1 до N
 
+
+def MultiplicationNumbers(number2):
+
+    result = [int(x) for x in str(number2)]
+    temp = 1
+    for i in result:
+        temp = temp * i
+
+    return f"Произведение цифр в числе - {temp}"
+
+
+print(MultiplicationNumbers(242))
 
 # 30. Показать кубы чисел, заканчивающихся на четную цифру
