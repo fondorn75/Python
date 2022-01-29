@@ -32,7 +32,7 @@ def SummaNumbers(a):
     temp = 0
     for i in range(1, a + 1):
         temp += i
-    return temp
+    return f"Сумма числе от 1 до А: {temp}"
 
 
 print(SummaNumbers(10))
@@ -54,9 +54,9 @@ print(NaturalDegree(3, 4))
 # 27. Определить количество цифр в числе
 
 
-def NumberOfDigits(number):
-    temp = str(number)
-    return f"Количество цифр в числе - {len(temp)}"
+def NumberOfDigits(number0):
+    temp = str(number0)
+    return f"Количество цифр в числе {number0} - {len(temp)}"
 
 
 print(NumberOfDigits(125487265))
@@ -64,9 +64,9 @@ print(NumberOfDigits(125487265))
 # 28. Подсчитать сумму цифр в числе
 
 
-def SummaNumbersInDigit(number):
+def SummaNumbersInDigit(number1):
 
-    result = [int(x) for x in str(number)]
+    result = [int(x) for x in str(number1)]
     temp = 0
     for i in result:
         temp += i
@@ -92,3 +92,17 @@ def MultiplicationNumbers(number2):
 print(MultiplicationNumbers(242))
 
 # 30. Показать кубы чисел, заканчивающихся на четную цифру
+
+def NumbersThirdChet(number3):
+    result = [int(x) for x in str(number3)]
+    temp = {}
+    j = 0
+    for i in result:
+        res = i**3
+        if res % 2 == 0:
+            temp[j] = res
+            j += 1
+
+    return temp.values()
+
+print(NumbersThirdChet(2381548713))
