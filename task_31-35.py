@@ -31,3 +31,13 @@ print(DictionaryN(6))
 # 15. Написать программу получающую набор произведений чисел от 1 до N.
 # Пример: пусть N = 4, тогда
 # [ 1, 2, 6, 24 ]
+
+def MultiplayNumbers(N):
+    list = set()
+    tmp = 1
+    for i in range (1, N+1):
+        list.add(i*tmp)
+        tmp = i
+    return sorted(list)
+
+print(MultiplayNumbers(4))
