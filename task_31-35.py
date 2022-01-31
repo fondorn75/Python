@@ -51,12 +51,12 @@ print(SummaNumbers(2456.4587))
 
 def MultiplayNumbers(N):
     list = []
-    tmp = 0
+    tmp = 1
     j = 0
-    for i in range (0, N):
+    for i in range (1, N+1):
         list.append(i*tmp)
         tmp = list[j]
         j += 1
     return list
 
-print(MultiplayNumbers(4))
+print(MultiplayNumbers(5))
