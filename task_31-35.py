@@ -1,5 +1,8 @@
 # 11. Для натурального N создать множество: 1, -3, 9, -27, 81 и т.д.
 
+from posixpath import split
+
+
 def NaturalN(N):
     list = set()
     for i in range (N):
@@ -36,12 +39,17 @@ print(UserString())
 
 def SummaNumbers(number):
     tmp = str(number)
-    result = []
-    for i in tmp:
-        if tmp != '.':
-            result.append(i)
-    
-    return result
+    temp = tmp.split('.')
+    num1 = int(temp[0])
+    num2 = int(temp[1])
+    summa = 0
+    while (num1 != 0): # складываем числа целой части
+        summa += num1 % 10
+        num1 = num1 // 10
+    while (num2 != 0): # складываем числа дробной части
+        summa += num2 % 10
+        num2 = num2 // 10
+    return summa
 
 print(SummaNumbers(2456.4587))
 
