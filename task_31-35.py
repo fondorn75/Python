@@ -24,20 +24,39 @@ print(DictionaryN(6))
 
 # 13. Пользователь задаёт две строки. Определить количество вхождений одной строки в другой.
 
+def UserString():
+    str1 = input("Введите перву строку: ")
+    str2 = input("Введите вторую строку: ")
+    result = int(str1.count(str2))
+    return result
+
+print(UserString())
 
 # 14. Подсчитать сумму цифр в вещественном числе.
 
+def SummaNumbers(number):
+    tmp = str(number)
+    result = []
+    for i in tmp:
+        if tmp != '.':
+            result.append(i)
+    
+    return result
+
+print(SummaNumbers(2456.4587))
 
 # 15. Написать программу получающую набор произведений чисел от 1 до N.
 # Пример: пусть N = 4, тогда
 # [ 1, 2, 6, 24 ]
 
 def MultiplayNumbers(N):
-    list = set()
-    tmp = 1
-    for i in range (1, N+1):
-        list.add(i*tmp)
-        tmp = i
-    return sorted(list)
+    list = []
+    tmp = 0
+    j = 0
+    for i in range (0, N):
+        list.append(i*tmp)
+        tmp = list[j]
+        j += 1
+    return list
 
 print(MultiplayNumbers(4))
