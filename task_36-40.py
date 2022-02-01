@@ -60,7 +60,7 @@ def RandomNumbers(num1, num2):
     lst = []
     for i in range(0, 10):
         temp = num1+(num2 - num1) * kvaziValue[i]
-        lst.append(round(temp, 2))
+        lst.append(int(temp))
 
     return lst
 
