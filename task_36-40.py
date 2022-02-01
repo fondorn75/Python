@@ -1,4 +1,5 @@
 from random import randint
+
 # 16. Задать список из n чисел последовательности (1+1/n)^n и вывести на экран их сумму
 
 
@@ -48,12 +49,32 @@ def RandomNumbersInList():
 
 print(RandomNumbersInList())
 
-# 19. Реализовать алгоритм задания случайных чисел. 
+# 19. Реализовать алгоритм задания случайных чисел.
 # Без использования встроенного генератора псевдослучайных чисел
 
-def RandomNumbers():
-    result = 0
-    
-    return result
+kvaziValue = [0.43, 0.80, 0.29, 0.67, 0.19,
+              0.96, 0.02, 0.73, 0.50, 0.33, 0.14, 0.71]
+
+
+def RandomNumbers(num1, num2):
+    lst = []
+    for i in range(0, 10):
+        temp = num1+(num2 - num1) * kvaziValue[i]
+        lst.append(round(temp, 2))
+
+    return lst
+
+
+print(RandomNumbers(2, 9))
 
 # 20. Определить, присутствует ли в заданном списке строк, некоторое число
+
+
+def NumberInStrings():
+    lst = input("Введите строку: ")
+    temp = input("Введите число: ")
+    result = lst.count(temp)
+    return f"Число присутствует - {result} раз"
+
+
+print(NumberInStrings())
