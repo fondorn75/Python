@@ -43,3 +43,10 @@ def RealNumbers():
 print(RealNumbers())
 
 # 25. Написать программу преобразования десятичного числа в двоичное
+
+
+def DecimalNumber(number):
+    return f"Число {number} в двоичном виде - {number :0b}"
+
+
+print(DecimalNumber(101))
