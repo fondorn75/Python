@@ -5,7 +5,7 @@ import math
 
 def Fibonachi(n):
     sum = 0
-    ch1 = 1
+    ch1 = 0
     ch2 = 1
     lstResult = []
 
