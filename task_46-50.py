@@ -53,6 +53,26 @@ print(QuadraticEquation(-4, 2, 5))
 
 # 29. Найти НОК двух чисел
 
+def NOK(a, b):
+    NOK.multiple = NOK.multiple + b
+    if ((NOK.multiple % a == 0) and (NOK.multiple % b == 0)):
+        return NOK.multiple
+    else:
+        NOK(a, b)
+    return NOK.multiple
+
+NOK.multiple = 0
+
+def PrintNok():
+    a = 10
+    b = 8
+    if a > b:
+        temp = NOK(b, a)
+    else:
+        temp = NOK(a, b)
+    return temp
+
+print(PrintNok())
 
 # 30. Вычислить число  c заданной точностью d
 # Пример: при d = 0.001,  = 3.141. 10-1d10-10
