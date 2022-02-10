@@ -4,26 +4,6 @@ import math
 # для отрицательных формула: F(n) = F(n+2) - F(n+1)
 
 
-def Fibonachi(n):
-    sum = 0
-    ch1 = 0
-    ch2 = 1
-    lstResult = []
-
-    for i in range(n):
-        if i < n:
-            sum = ch1 + ch2
-            ch1 = ch2
-            ch2 = sum
-            i += 1
-        lstResult.append(sum)
-
-    return lstResult
-
-
-print(Fibonachi(7))
-
-
 def Fibonacci(n):
     if (n == 1 or n == 2):
         return 1
@@ -33,7 +13,7 @@ def Fibonacci(n):
 
 def PrintFibonacci(n):
     listFib = []
-    for i in range(n):
+    for i in range(1, n):
         listFib.append(Fibonacci(i))
     return listFib
 
