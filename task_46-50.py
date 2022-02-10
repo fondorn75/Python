@@ -3,6 +3,7 @@ import math
 # для положительных формула: F(n) = F(n-1) + F(n-2)
 # для отрицательных формула: F(n) = F(n+2) - F(n+1)
 
+
 def Fibonachi(n):
     sum = 0
     ch1 = 0
@@ -19,9 +20,28 @@ def Fibonachi(n):
 
     return lstResult
 
+
 print(Fibonachi(7))
 
+
+def Fibonacci(n):
+    if (n == 1 or n == 2):
+        return 1
+    else:
+        return Fibonacci(n - 1) + Fibonacci(n - 2)
+
+
+def PrintFibonacci(n):
+    listFib = []
+    for i in range(n):
+        listFib.append(Fibonacci(i))
+    return listFib
+
+
+print(PrintFibonacci(10))
+
 # 27. Строка содержит набор чисел. Показать большее и меньшее число
+
 
 def StringNumbers():
     str = input("Введите любые числа: ")
