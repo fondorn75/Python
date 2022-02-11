@@ -1,6 +1,6 @@
 # 21. Определить, позицию второго вхождения строки в списке либо сообщить, что его нет.
-
-from operator import index
+import functools
+import math
 
 
 def SecondNumber():
@@ -12,7 +12,7 @@ def SecondNumber():
         if str == i:
             tmp += 1
         if tmp == 2:
-            return f"Второ вхождение в списке на позиции - {pos}"
+            return f"Второе вхождение в списке на позиции - {pos}"
         pos += 1
 
 
@@ -40,14 +40,8 @@ print(SummNumberInList())
 
 def PairInList():
     lst = [2, 3, 4, 5, 6]
-    lst2 = []
-    j = 0
-    temp = lst[-1]
-    for i in range(0, len(lst) // 2):
-        temp = lst[i] * lst[:-i]
-        lst2[j] = temp
-        j += 1
-    return lst2
+    return math.prod(lst)
+    #print(functools.reduce(lambda a, b: a * b, lst))
 
 
 print(PairInList())
