@@ -1,9 +1,24 @@
 # 21. Определить, позицию второго вхождения строки в списке либо сообщить, что его нет.
 
+from operator import index
+
+
+def SecondNumber():
+    list = ["ab", "adsf", "thfg", "fgjty", "hdfn", "ab", "afsde"]
+    str = "ab"
+    tmp = 0
+    pos = 0
+    for i in list:
+        if str == i:
+            tmp += 1
+        if tmp == 2:
+            return f"Второ вхождение в списке на позиции - {pos}"
+        pos += 1
+
+
+print(SecondNumber())
 
 # 22. Найти сумму чисел списка стоящих на нечетной позиции
-
-from unittest import result
 
 
 lst = [2, 3, 6, 3, 7, 9, 4, 6, 5]
@@ -27,15 +42,15 @@ def PairInList():
     lst = [2, 3, 4, 5, 6]
     lst2 = []
     j = 0
-    tmp = lst[-1]
+    temp = lst[-1]
     for i in range(0, len(lst) // 2):
-        tmp = lst[i] * lst[:-i]
-        lst2[j] = tmp
+        temp = lst[i] * lst[:-i]
+        lst2[j] = temp
         j += 1
     return lst2
 
-print(PairInList())
 
+print(PairInList())
 
 
 # 24. В заданном списке вещественных чисел найдите разницу между максимальным и минимальным значением дробной части элементов.
