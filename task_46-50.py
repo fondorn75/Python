@@ -5,7 +5,9 @@ import math
 
 
 def Fibonacci(n):
-    if (n == 1 or n == 2):
+    if n <= 0:
+        return Fibonacci(n + 2) - Fibonacci(n + 1)
+    elif (n == 1 or n == 2):
         return 1
     else:
         return Fibonacci(n - 1) + Fibonacci(n - 2)
@@ -13,7 +15,7 @@ def Fibonacci(n):
 
 def PrintFibonacci(n):
     listFib = []
-    for i in range(1, n):
+    for i in range(-n, n+1):
         listFib.append(Fibonacci(i))
     return listFib
 
@@ -109,3 +111,20 @@ def NumberAccuracy(number2):
 
 
 print(NumberAccuracy(3.123569887415))
+
+
+# 31. Составить список простых множителей натурального числа N
+
+def PrimeFactors(num):
+    list_simple = []
+    simple = 2
+    while num > 1:
+        if num % simple == 0:
+            list_simple.append(simple)
+            num = num/simple
+        else:
+            simple += 1
+    return list_simple
+
+
+print(PrimeFactors(123))
