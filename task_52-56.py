@@ -41,11 +41,11 @@ Polynomial(3)
 
 def Numbers():
     data = open("numbers.txt", "r")
-    res = list(map(int, data))
-    # for i in range( 1, len(res)):
-    #     if list[i] - 1 != list[i - 1]: return list[i] - 1
+    res = list(map(int, data.read().split(' ')))
+    for i in range( 1, len(res)):
+        if res[i] - 1 != res[i - 1]: return res[i] - 1
     data.close()
-    return res
+    
 
 print(Numbers())
 
