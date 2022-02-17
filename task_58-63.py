@@ -1,5 +1,20 @@
 # 38. Напишите программу, удаляющую из текста все слова содержащие "абв".
 
+text = 'Строка абвал не существует в этом сабвуфер мире сабвиль.'
+
+
+def DeleteSymbols():
+    temp = text.split(' ')
+    str = 'абв'
+    newStroka = []
+    for word in temp:
+        if str not in word:
+            newStroka.append(word)
+    result = ' '.join(newStroka)
+    return result
+
+
+print(DeleteSymbols())
 
 # 39. Помните игру с конфетами из модуля "Математика и Информатика"? Создайте такую игру для игры человек против человека
 #     * Добавьте игру против бота
