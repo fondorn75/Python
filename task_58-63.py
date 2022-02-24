@@ -34,6 +34,24 @@ print(DeleteSymbols())
 # 42. Реализовать RLE алгоритм. реализовать модуль сжатия и восстановления данных.
 # входные и выходные данные хранятся в отдельных файлах
 
+def rle_system():
+    stroka = 'aaadddeeffwwrttteegqqbbbbbfffffhjj'
+    temp = stroka[0]
+    count = 0
+    rle = ''
+    for i in stroka:
+        if i == temp:
+            count += 1
+        else:
+            rle += f'{count}{temp}'
+            temp = i
+            count = 1
+    rle += f'{count}{temp}'
+    return rle
+
+
+print(rle_system())
+
 
 # 43. Дана последовательность чисел. Получить список уникальных элементов заданной последовательности.
 # Пример: [1, 2, 3, 5, 1, 5, 3, 10] => [2, 10]
