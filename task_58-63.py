@@ -30,6 +30,24 @@ print(DeleteSymbols())
 # * Добавить возможность использования скобок, меняющих приоритет операций.
 # Пример: 1+2*3 => 7; (1+2)*3 => 9;
 
+def New_calc():
+    stroka = input('Введите пример: ')
+    test = list(stroka.split(' '))
+    x = int(test[0])
+    y = int(test[2])
+    if test[1] == '+':
+        result = x + y
+    elif test[1] == '-':
+        result = x - y
+    elif test[1] == '*':
+        result = x * y
+    elif test[1] == '/':
+        result = x / y
+    return (f"Результат вычислений: {stroka} = {result}")
+
+
+print(New_calc())
+
 
 # 42. Реализовать RLE алгоритм. реализовать модуль сжатия и восстановления данных.
 # входные и выходные данные хранятся в отдельных файлах
